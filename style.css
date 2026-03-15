@@ -574,3 +574,110 @@ nav {
   font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--accent-light); margin-top: 6px; display: block;
 }
+
+/* ══════════════════════════════════════
+   RESPONSIVE — MOBİL
+══════════════════════════════════════ */
+
+@media (max-width: 960px) {
+
+  /* Kitabı ekrana sığdır */
+  #book {
+    width: 100vw !important;
+    height: calc(100vw * 0.69) !important;
+    max-width: 900px;
+  }
+
+  #stage {
+    perspective: 1200px !important;
+    padding: 56px 0 0 0;
+  }
+
+  /* Ok butonları */
+  .nav-arrow.prev { left: 4px !important; }
+  .nav-arrow.next { right: 4px !important; }
+  .nav-arrow { width: 36px !important; height: 36px !important; font-size: 14px !important; }
+}
+
+@media (max-width: 600px) {
+
+  /* Navbar */
+  nav { padding: 0 1rem; height: 48px; }
+  .nav-logo { font-size: 13px; letter-spacing: 0.08em; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.12em; }
+  .lang-btn { padding: 4px 8px; font-size: 10px; }
+
+  /* Stage */
+  #stage { padding-top: 48px; }
+
+  /* Kitap — telefonda tek sayfa görünümü */
+  #book {
+    width: 100vw !important;
+    height: calc(100vw * 1.38) !important;
+  }
+
+  /* Spread'ler tek sütun — sadece sol sayfa görünsün */
+  .spread {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Sağ sayfayı gizle, sadece sol göster */
+  .spread .page-right {
+    display: none !important;
+  }
+
+  /* Sol sayfa tam genişlik */
+  .spread .page-left {
+    width: 100% !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 24px var(--page-shadow) !important;
+  }
+
+  /* Kitap cildini gizle */
+  #book::before { display: none !important; }
+
+  /* Kapak özel */
+  .cover-page { padding: 2rem; }
+  .cover-main-title { font-size: 38px !important; }
+  .cover-right { display: none !important; }
+
+  /* Hakkımda */
+  .about-left { padding: 2rem 1.5rem; }
+  .about-photo-frame { width: 130px; height: 165px; }
+  .about-name { font-size: 18px; }
+  .about-right { padding: 1.5rem; gap: 1.5rem !important; }
+
+  /* Projeler indeksi */
+  .works-left { padding: 2rem 1.5rem; }
+  .works-heading { font-size: 36px !important; margin-bottom: 1.5rem; }
+  .works-right { padding: 1.5rem; }
+  .works-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+
+  /* Proje sayfası */
+  .project-left { padding: 2rem 1.5rem; }
+  .project-num { font-size: 48px !important; }
+  .project-right { display: none !important; }
+
+  /* İletişim */
+  .contact-left { padding: 2rem 1.5rem; }
+  .contact-heading { font-size: 32px !important; margin-bottom: 2rem; }
+  .contact-right { display: none !important; }
+
+  /* Galeri sayfaları */
+  .gal-stack { padding: 0.75rem !important; gap: 0.5rem !important; }
+  .gal-3grid { padding: 0.75rem !important; gap: 0.5rem !important; }
+  .gal-top1-bot2 { padding: 0.75rem !important; gap: 0.5rem !important; }
+  .gal-4grid { padding: 0.75rem !important; gap: 0.5rem !important; }
+  .gal-3row { padding: 0.75rem !important; gap: 0.5rem !important; }
+
+  /* Dots */
+  .page-indicator { bottom: 1rem; gap: 5px; }
+  .page-dot { width: 4px; height: 4px; }
+
+  /* Lightbox */
+  #lightbox img { max-width: 98vw; max-height: 80vh; }
+  #lightbox-close { top: 1rem; right: 1rem; font-size: 22px; }
+  #lightbox-prev { left: 0; }
+  #lightbox-next { right: 0; }
+}
