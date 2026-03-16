@@ -407,7 +407,12 @@ nav {
 }
 
 .project-desc {
-  font-size: 8.2px; line-height: 1.85; color: var(--ink-light);
+  font-size: 9.2px; line-height: 1.85; color: var(--ink-light);
+  font-weight: 300;
+}
+
+.project-desc1 {
+  font-size: 8.5px; line-height: 1.85; color: var(--ink-light);
   font-weight: 300;
 }
 
